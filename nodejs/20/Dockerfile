@@ -28,7 +28,7 @@ LABEL       org.opencontainers.image.source="https://github.com/pterodactyl/yolk
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         apt update && apt upgrade -y \
-		    	&& apt install -y ca-certificates curl ffmpeg git openssl 3 tar tzdata \
+		    	&& apt install -y ca-certificates curl ffmpeg git openssl sqlite3 tar tzdata \
 				&& adduser -D -h /home/container container
 
 USER        container
