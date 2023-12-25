@@ -29,7 +29,7 @@ LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         apt update && apt upgrade -y \
 		    	&& apt install -y ca-certificates curl ffmpeg git openssl sqlite3 tar tzdata \
-				&& adduser -D -h /home/container container
+				&& useradd -m -d /home/container -s /bin/bash container
 
 USER        container
 ENV         USER=container HOME=/home/container
