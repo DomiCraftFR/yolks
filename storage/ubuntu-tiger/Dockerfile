@@ -8,3 +8,5 @@ RUN 		apt update -y \
       	    && git clone https://github.com/Genivia/RE-flex.git \
       		&& cd RE-flex \
       		&& ./clean.sh && ./build.sh && ./allinstall.sh
+
+SHELL ["/bin/bash", "-c"]
