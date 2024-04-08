@@ -4,7 +4,7 @@ LABEL       author="Aurélien Delval-Carbonne" maintainer="aurelien.delval-carbo
 
 RUN 		apt update -y \
       		&& apt install -y build-essential git python-is-python3 \
-  			&& apt install -y autoconf automake bison clang-format doxygen libboost-dev libboost-graph-dev libboost-program-options-dev libboost-system-dev libtool \
+  			&& apt install -y autoconf automake bison clang clang-format doxygen libboost-dev libboost-graph-dev libboost-program-options-dev libboost-system-dev libtool \
       	    && git clone https://github.com/Genivia/RE-flex.git \
       		&& cd RE-flex \
       		&& ./clean.sh && ./build.sh && ./allinstall.sh
