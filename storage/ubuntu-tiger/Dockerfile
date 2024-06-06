@@ -7,6 +7,9 @@ RUN 		apt update -y \
       		&& apt install -y build-essential git g++-multilib python-is-python3 \
   			&& apt install -y autoconf autoconf-archive automake bison clang clang-format doxygen flex gawk ghc libboost-dev libboost-graph-dev libboost-program-options-dev libboost-system-dev libreadline-dev libtool texinfo xsltproc
 
+# ARM compilation & virtual machine.
+			apt install gcc-arm-linux-gnueabihf libc6-dev-armhf-cross qemu-user
+
 # Reflex.
 RUN         git clone https://github.com/Genivia/RE-flex.git && cd RE-flex/ && ./clean.sh && ./build.sh && ./allinstall.sh && cd ../
 
