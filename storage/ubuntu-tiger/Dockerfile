@@ -4,7 +4,7 @@ LABEL       author="Aurélien Delval-Carbonne" maintainer="aurelien.delval-carbo
 
 # General Dependencies.
 RUN 		apt update -y \
-      		&& apt install -y build-essential git g++-multilib python-is-python3 \
+      		&& apt install -y build-essential git g++-multilib python-is-python3 valgrind \
   			&& apt install -y autoconf autoconf-archive automake bison clang clang-format doxygen flex gawk ghc libboost-dev libboost-graph-dev libboost-program-options-dev libboost-system-dev libreadline-dev libtool texinfo xsltproc
 
 # ARM compilation & virtual machine.
