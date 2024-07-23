@@ -20,7 +20,7 @@ jobs:
           - ubuntu
           - dotnet
           - proton
-          - proton_8   
+          - proton_8
           - sniper
     steps:
       - uses: actions/checkout@v4
@@ -30,8 +30,8 @@ jobs:
       - uses: docker/login-action@v3
         with:
           registry: ghcr.io
-          username: ${{ github.repository_owner }}
-          password: ${{ secrets.REGISTRY_TOKEN }}
+          username: domicraftfr
+          password: ${{ secrets.GITHUB_TOKEN }}
       - uses: docker/build-push-action@v6
         with:
           context: ./steamcmd
@@ -39,5 +39,4 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/steamcmd:${{ matrix.distro }}
-            ${{ github.repository_owner == 'pelican-eggs' && format('ghcr.io/parkervcp/steamcmd:{0}', matrix.distro) || '' }}
+            ghcr.io/domicraftfr/steamcmd:${{ matrix.distro }}
